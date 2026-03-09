@@ -1,0 +1,7 @@
+from highrise import BaseBot, User
+
+class Bot(BaseBot):
+    async def on_user_join(self, user: User, position):
+        # This sends a public chat message when someone joins
+        await self.highrise.chat(f"Welcome to the room, {user.username}!")
+      
